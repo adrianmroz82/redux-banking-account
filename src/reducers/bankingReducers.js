@@ -14,21 +14,3 @@ export const bankingReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-const deposit = {
-  type: 'DEPOSIT',
-  amount: 10,
-};
-
-const withdraw = {
-  type: 'WITHDRAW',
-  amount: 3,
-};
-
-const collectInterest = {
-  type: 'COLLECT_INTEREST',
-};
-
-const deleteAccount = {
-  type: 'DELETE_ACCOUNT',
-};

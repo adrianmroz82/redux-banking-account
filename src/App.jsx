@@ -2,15 +2,18 @@ import React from 'react';
 import Auth from './components/Auth';
 import Balance from './components/Balance';
 import Banking from './components/Banking';
-import AccountStatus from './components/AccountStatus';
+import './App.css';
+import Container from '@material-ui/core/Container';
+import Grid, { GridSpacing } from '@material-ui/core/Grid';
 
 const App = () => {
   return (
-    <div>
-      <Auth />
-      <Balance />
-      <Banking />
-      <AccountStatus />
+    <div className="container">
+      <Container style={{ marginTop: '100px' }} fixed maxWidth="md">
+        <Auth />
+        <Balance />
+        <Banking />
+      </Container>
     </div>
   );
 };

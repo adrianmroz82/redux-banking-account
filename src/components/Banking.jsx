@@ -6,9 +6,11 @@ import {
   deposit,
   withdraw,
 } from '../actions/bankingActions';
+import { Button } from '@material-ui/core';
+import '../App.css';
 
 const Banking = () => {
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState(1);
   const dispatch = useDispatch();
 
   const handleDeposit = () => {
@@ -33,18 +35,34 @@ const Banking = () => {
         type="text"
         className="form-control"
       />
-      <button onClick={handleDeposit} className="btn btn-success">
+      <br />
+      <Button
+        style={{ marginRight: '5px' }}
+        variant="contained"
+        color="primary"
+        onClick={handleDeposit}
+      >
         Deposit
-      </button>
-      <button onClick={handleWithdraw} className="btn btn-primary">
+      </Button>
+      <Button
+        style={{ marginRight: '5px' }}
+        onClick={handleWithdraw}
+        variant="contained"
+        color="primary"
+      >
         Withdraw
-      </button>
-      <button onClick={handleCollectInterest} className="btn btn-warning">
+      </Button>
+      <Button
+        style={{ marginRight: '5px' }}
+        variant="contained"
+        color="primary"
+        onClick={handleCollectInterest}
+      >
         Collect Interest %
-      </button>
-      <button onClick={handleDelete} className="btn btn-danger">
+      </Button>
+      <Button variant="contained" color="secondary" onClick={handleDelete}>
         Delete Account
-      </button>
+      </Button>
     </div>
   );
 };
